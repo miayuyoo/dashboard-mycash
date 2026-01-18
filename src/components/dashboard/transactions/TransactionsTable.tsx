@@ -125,29 +125,29 @@ export function TransactionsTable() {
 
                 <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
                     {/* Search */}
-                    <div className="relative w-full md:w-96">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={20} />
+                    <div className="relative w-full md:w-64">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" size={18} />
                         <input
                             type="text"
                             placeholder="Buscar lançamentos..."
                             value={localSearch}
                             onChange={(e) => setLocalSearch(e.target.value)}
-                            className="w-full pl-12 pr-6 h-12 bg-white border border-neutral-200 rounded-full text-body-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900 transition-all"
+                            className="w-full pl-10 pr-4 h-10 bg-white border border-neutral-200 rounded-full text-body-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900 transition-all"
                         />
                     </div>
 
                     {/* Type Filter */}
-                    <div className="relative w-full md:w-[180px]">
+                    <div className="relative w-full md:w-[150px]">
                         <select
                             value={localType}
                             onChange={(e) => setLocalType(e.target.value as any)}
-                            className="w-full pl-6 pr-10 h-12 bg-white border border-neutral-200 rounded-full text-body-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 appearance-none cursor-pointer transition-all"
+                            className="w-full pl-4 pr-10 h-10 bg-white border border-neutral-200 rounded-full text-body-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 appearance-none cursor-pointer transition-all"
                         >
                             <option value="all">Todas</option>
                             <option value="income">Receitas</option>
                             <option value="expense">Despesas</option>
                         </select>
-                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none" size={16} />
+                        <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none" size={16} />
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@ export function TransactionsTable() {
             <div className="w-full flex flex-col">
                 <div className="overflow-x-auto">
                     <table className="w-full min-w-[800px]">
-                        <thead className="bg-neutral-50 border-b border-neutral-100">
+                        <thead className="bg-white border-b border-neutral-100">
                             <tr>
                                 <th className="px-6 py-4 text-left text-label-xs font-bold text-neutral-500 uppercase tracking-wider w-[60px]">Avatar</th>
                                 <th className="px-6 py-4 text-left text-label-xs font-bold text-neutral-500 uppercase tracking-wider">Data</th>
@@ -173,7 +173,7 @@ export function TransactionsTable() {
                                     const member = familyMembers.find(m => m.id === tx.memberId);
                                     const isIncome = tx.type === 'income';
                                     const Icon = isIncome ? ArrowDownLeft : ArrowUpRight;
-                                    const iconColor = isIncome ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700';
+                                    const iconColor = isIncome ? 'text-green-700' : 'text-red-700';
 
                                     return (
                                         <tr
@@ -196,10 +196,10 @@ export function TransactionsTable() {
                                                 {format(parseISO(tx.date), 'dd/MM/yyyy')}
                                             </td>
 
-                                            {/* Description (Icon 24px) */}
+                                            {/* Description (Icon 24px, No BG) */}
                                             <td className="px-6 py-4">
                                                 <div className="flex items-center gap-4">
-                                                    <div className={clsx("w-10 h-10 rounded-full flex items-center justify-center", iconColor)}>
+                                                    <div className={clsx("w-6 h-6 flex items-center justify-center", iconColor)}>
                                                         <Icon size={24} />
                                                     </div>
                                                     <span className="text-body-sm font-bold text-neutral-1000 line-clamp-1">{tx.description}</span>
