@@ -14,7 +14,7 @@ Lista de tarefas baseada na sequência de prompts extraída.
   - Desenvolvimento dos cards de Saldo Total, Receitas e Despesas com animações.
 - [x] **PROMPT 6: Header do Dashboard com Controles**
   - Implementação de busca real-time, seletor de período e widget de membros da família.
-- [ ] **PROMPT 7: Carrossel de Gastos por Categoria**
+- [x] **PROMPT 7: Carrossel de Gastos por Categoria**
   - Widget interativo com gráficos donut e scroll horizontal para despesas por categoria.
 - [ ] **PROMPT 8: Gráfico de Fluxo Financeiro**
   - Gráfico de área (Recharts) mostrando evolução de receitas vs despesas.
