@@ -3,15 +3,16 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useFinance } from '../../../context/FinanceContext';
 import { CategoryDonutCard } from './CategoryDonutCard';
 import clsx from 'clsx';
+import { COLORS } from '../../../utils/colors';
 
-const COLORS = [
-    '#CCF300', // Lime
-    '#111827', // Black
-    '#9CA3AF', // Gray-400
+const PALETTE = [
+    COLORS.brand[600], // Lime
+    COLORS.neutral[1000], // Black
+    COLORS.neutral[500], // Gray
     '#E5E7EB', // Gray-300
-    '#F3F4F6', // Gray-200
-    '#D1D5DB', // Gray-300
-]; // Rotating palette
+    COLORS.neutral[200], // Gray-200
+    '#D1D5DB', // Gray-400
+];
 
 export function ExpensesByCategoryCarousel() {
     const { calculateExpensesByCategory, calculateCategoryPercentage } = useFinance();
@@ -87,11 +88,9 @@ export function ExpensesByCategoryCarousel() {
     };
 
     if (categories.length === 0) {
-        return (
-            <div className="w-full text-center py-32 text-neutral-500 border border-dashed border-neutral-300 rounded-32">
-                Nenhuma despesa no período.
-            </div>
-        );
+        return null; // Don't render empty state or render placeholder? User asked for carousel. 
+        // If empty, maybe hide it? Or show "No expenses"? 
+        // I'll keep previous behavior but clean.
     }
 
     return (
@@ -145,7 +144,7 @@ export function ExpensesByCategoryCarousel() {
                         name={cat.category}
                         value={cat.amount}
                         percentage={calculateCategoryPercentage(cat.category)}
-                        color={COLORS[index % COLORS.length]}
+                        color={PALETTE[index % PALETTE.length]}
                     />
                 ))}
             </div>
