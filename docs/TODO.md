@@ -12,7 +12,7 @@ Lista de tarefas baseada na sequência de prompts extraída.
   - Configuração do `FinanceProvider`, funções CRUD em memória e lógica de filtros globais.
 - [x] **PROMPT 5: Cards de Resumo Financeiro**
   - Desenvolvimento dos cards de Saldo Total, Receitas e Despesas com animações.
-- [ ] **PROMPT 6: Header do Dashboard com Controles**
+- [x] **PROMPT 6: Header do Dashboard com Controles**
   - Implementação de busca real-time, seletor de período e widget de membros da família.
 - [ ] **PROMPT 7: Carrossel de Gastos por Categoria**
   - Widget interativo com gráficos donut e scroll horizontal para despesas por categoria.
