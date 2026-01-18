@@ -16,7 +16,7 @@ Lista de tarefas baseada na sequência de prompts extraída.
   - Implementação de busca real-time, seletor de período e widget de membros da família.
 - [x] **PROMPT 7: Carrossel de Gastos por Categoria**
   - Widget interativo com gráficos donut e scroll horizontal para despesas por categoria.
-- [ ] **PROMPT 8: Gráfico de Fluxo Financeiro**
+- [x] **PROMPT 8: Gráfico de Fluxo Financeiro**
   - Gráfico de área (Recharts) mostrando evolução de receitas vs despesas.
 - [ ] **PROMPT 9: Widget de Cartões de Crédito**
   - Lista visual de cartões com indicação de uso de limite e temas customizados.
