@@ -11,20 +11,23 @@ import { CreditCardsWidget } from './components/dashboard/widgets/CreditCardsWid
 const Dashboard = () => (
     <div className="flex flex-col gap-8">
         <DashboardHeader />
-        <ExpensesByCategoryCarousel />
 
+        {/* Main Grid: Carousel/Summary (Left) | Widgets (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            {/* Main Column: Summary & Charts */}
+            {/* Left Column: Carousel & Summary */}
             <div className="lg:col-span-2 flex flex-col gap-8">
+                <ExpensesByCategoryCarousel />
                 <SummaryCards />
-                <FinancialFlowChart />
             </div>
 
-            {/* Side Column: Widgets */}
-            <div className="lg:col-span-1 flex flex-col gap-8">
+            {/* Right Column: Widgets */}
+            <div className="lg:col-span-1 h-full">
                 <CreditCardsWidget />
             </div>
         </div>
+
+        {/* Full Width Flow Chart */}
+        <FinancialFlowChart />
     </div>
 );
 
