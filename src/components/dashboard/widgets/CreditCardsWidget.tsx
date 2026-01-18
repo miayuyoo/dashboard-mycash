@@ -63,15 +63,17 @@ export function CreditCardsWidget() {
     };
 
     return (
-        <div className="flex flex-col w-full h-full bg-neutral-100 rounded-32 p-24 md:p-32">
+        <div className="flex flex-col w-full h-full bg-white border border-neutral-200 rounded-32 p-24 md:p-32">
             {/* Header */}
             <div className="flex items-center justify-between mb-24">
                 <div className="flex items-center gap-3">
-                    <CreditCard size={24} className="text-neutral-1000" />
-                    <h3 className="text-heading-sm font-medium text-neutral-1000">Cartões</h3>
+                    <div className="p-8 bg-neutral-100 rounded-lg">
+                        <CreditCard size={24} className="text-neutral-1000" />
+                    </div>
+                    <h3 className="text-heading-sm font-bold text-neutral-1000">Cartões</h3>
                 </div>
                 <button
-                    className="w-10 h-10 rounded-full bg-white border border-neutral-200 flex items-center justify-center hover:bg-neutral-200 transition-colors group shadow-sm"
+                    className="w-10 h-10 rounded-full bg-white border border-neutral-200 flex items-center justify-center hover:bg-neutral-50 transition-colors group shadow-sm"
                     title="Novo cartão"
                 >
                     <Plus size={20} className="text-neutral-600 group-hover:text-neutral-900" />

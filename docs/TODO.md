@@ -18,7 +18,7 @@ Lista de tarefas baseada na sequência de prompts extraída.
   - Widget interativo com gráficos donut e scroll horizontal para despesas por categoria.
 - [x] **PROMPT 8: Gráfico de Fluxo Financeiro**
   - Gráfico de área (Recharts) mostrando evolução de receitas vs despesas.
-- [ ] **PROMPT 9: Widget de Cartões de Crédito**
+- [x] **PROMPT 9: Widget de Cartões de Crédito**
   - Lista visual de cartões com indicação de uso de limite e temas customizados.
 - [ ] **PROMPT 10: Widget de Próximas Despesas**
   - Lista cronológica de contas a pagar com lógica de "marcar como pago".
