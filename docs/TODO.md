@@ -4,9 +4,9 @@ Lista de tarefas baseada na sequência de prompts extraída.
 
 - [x] **PROMPT 1: Estrutura Base e Configuração**
   - Setup de pastas, Tailwind CSS com variáveis do Figma, tipos TypeScript fundamentais e React Router.
-- [ ] **PROMPT 2: Sistema de Layout e Navegação Desktop**
+- [x] **PROMPT 2: Sistema de Layout e Navegação Desktop**
   - Implementação da Sidebar expansível/colapsável com transições e estados de item ativo.
-- [ ] **PROMPT 3: Sistema de Layout e Navegação Mobile**
+- [x] **PROMPT 3: Sistema de Layout e Navegação Mobile**
   - Criação do HeaderMobile, MenuDropdown e lógica de responsividade para alternância entre layouts.
 - [ ] **PROMPT 4: Context Global e Gerenciamento de Estado**
   - Configuração do `FinanceProvider`, funções CRUD em memória e lógica de filtros globais.
