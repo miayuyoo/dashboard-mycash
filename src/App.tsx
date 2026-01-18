@@ -9,6 +9,7 @@ import { FinancialFlowChart } from './components/dashboard/charts/FinancialFlowC
 import { CreditCardsWidget } from './components/dashboard/widgets/CreditCardsWidget';
 
 import { UpcomingExpensesWidget } from './components/dashboard/widgets/UpcomingExpensesWidget';
+import { TransactionsTable } from './components/dashboard/transactions/TransactionsTable';
 
 const Dashboard = () => (
     <div className="flex flex-col gap-8">
@@ -39,6 +40,9 @@ const Dashboard = () => (
                 <UpcomingExpensesWidget />
             </div>
         </div>
+
+        {/* Full Width Transactions Table */}
+        <TransactionsTable />
     </div>
 );
 
