@@ -4,11 +4,17 @@ import { MainLayout } from './components/layout/MainLayout';
 // Page Placeholders
 import { SummaryCards } from './components/dashboard/SummaryCards';
 import { DashboardHeader } from './components/dashboard/DashboardHeader';
+import { ExpensesByCategoryCarousel } from './components/dashboard/category/ExpensesCarousel';
 
 const Dashboard = () => (
     <div className="flex flex-col gap-8">
         <DashboardHeader />
         <SummaryCards />
+
+        <div className="flex flex-col gap-4">
+            <h3 className="text-heading-sm font-bold text-neutral-1000">Despesas por Categoria</h3>
+            <ExpensesByCategoryCarousel />
+        </div>
     </div>
 );
 const Goals = () => <h1 className="text-heading-lg font-bold">Objetivos</h1>;
