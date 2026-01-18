@@ -10,7 +10,7 @@ Lista de tarefas baseada na sequência de prompts extraída.
   - Criação do HeaderMobile, MenuDropdown e lógica de responsividade para alternância entre layouts.
 - [x] **PROMPT 4: Context Global e Gerenciamento de Estado**
   - Configuração do `FinanceProvider`, funções CRUD em memória e lógica de filtros globais.
-- [ ] **PROMPT 5: Cards de Resumo Financeiro**
+- [x] **PROMPT 5: Cards de Resumo Financeiro**
   - Desenvolvimento dos cards de Saldo Total, Receitas e Despesas com animações.
 - [ ] **PROMPT 6: Header do Dashboard com Controles**
   - Implementação de busca real-time, seletor de período e widget de membros da família.
