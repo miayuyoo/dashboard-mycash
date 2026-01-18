@@ -6,10 +6,10 @@ import { NewTransactionButton } from './header/NewTransactionButton';
 
 export function DashboardHeader() {
     return (
-        <header className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 w-full mb-8">
+        <header className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 w-full mb-8 bg-surface-500 p-6 md:p-8 rounded-32">
             <div className="flex flex-col md:flex-row items-center gap-4 w-full lg:w-auto">
                 <SearchInput />
-                <div className="flex items-center gap-4 w-full md:w-auto overflow-x-auto pb-2 md:pb-0">
+                <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
                     <FilterToggle />
                     <DateSelector />
                 </div>

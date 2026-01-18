@@ -125,6 +125,9 @@ export default {
                     900: '#113760',
                     1000: '#081B30',
                 },
+                surface: {
+                    500: '#FFFFFF',
+                },
             },
             spacing: {
                 '2': '2px',
