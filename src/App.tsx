@@ -3,14 +3,11 @@ import { MainLayout } from './components/layout/MainLayout';
 
 // Page Placeholders
 import { SummaryCards } from './components/dashboard/SummaryCards';
+import { DashboardHeader } from './components/dashboard/DashboardHeader';
 
 const Dashboard = () => (
     <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-            <h1 className="text-display-xs font-bold text-neutral-1000">Dashboard</h1>
-            <p className="text-body-md text-neutral-500">Visão geral das suas finanças</p>
-        </div>
-
+        <DashboardHeader />
         <SummaryCards />
     </div>
 );
