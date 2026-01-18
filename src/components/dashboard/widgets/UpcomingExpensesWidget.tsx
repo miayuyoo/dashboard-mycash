@@ -7,7 +7,8 @@ import { Transaction } from '../../../types';
 
 export function UpcomingExpensesWidget() {
     // Note: Assuming Context has 'accounts' or we can derive names.
-    const { transactions, accounts, creditCards, updateTransaction, addTransaction } = useFinance();
+    const { transactions, bankAccounts, creditCards, updateTransaction, addTransaction } = useFinance();
+    const accounts = bankAccounts; // Alias for local code compatibility
 
     // Filter pending expenses
     const pendingExpenses = transactions
