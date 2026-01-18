@@ -1,0 +1,54 @@
+# 📋 To-Do de Implementação
+
+Lista de tarefas baseada na sequência de prompts extraída.
+
+- [ ] **PROMPT 1: Estrutura Base e Configuração**
+  - Setup de pastas, Tailwind CSS com variáveis do Figma, tipos TypeScript fundamentais e React Router.
+- [ ] **PROMPT 2: Sistema de Layout e Navegação Desktop**
+  - Implementação da Sidebar expansível/colapsável com transições e estados de item ativo.
+- [ ] **PROMPT 3: Sistema de Layout e Navegação Mobile**
+  - Criação do HeaderMobile, MenuDropdown e lógica de responsividade para alternância entre layouts.
+- [ ] **PROMPT 4: Context Global e Gerenciamento de Estado**
+  - Configuração do `FinanceProvider`, funções CRUD em memória e lógica de filtros globais.
+- [ ] **PROMPT 5: Cards de Resumo Financeiro**
+  - Desenvolvimento dos cards de Saldo Total, Receitas e Despesas com animações.
+- [ ] **PROMPT 6: Header do Dashboard com Controles**
+  - Implementação de busca real-time, seletor de período e widget de membros da família.
+- [ ] **PROMPT 7: Carrossel de Gastos por Categoria**
+  - Widget interativo com gráficos donut e scroll horizontal para despesas por categoria.
+- [ ] **PROMPT 8: Gráfico de Fluxo Financeiro**
+  - Gráfico de área (Recharts) mostrando evolução de receitas vs despesas.
+- [ ] **PROMPT 9: Widget de Cartões de Crédito**
+  - Lista visual de cartões com indicação de uso de limite e temas customizados.
+- [ ] **PROMPT 10: Widget de Próximas Despesas**
+  - Lista cronológica de contas a pagar com lógica de "marcar como pago".
+- [ ] **PROMPT 11: Tabela de Transações Detalhada**
+  - Extrato completo com filtros locais, paginação e zebra striping.
+- [ ] **PROMPT 12: Modal de Nova Transação**
+  - Formulário completo com campos condicionais e validações rigorosas.
+- [ ] **PROMPT 13: Modal de Adicionar Membro**
+  - Cadastro de membros da família com seleção de avatar.
+- [ ] **PROMPT 14: Modal de Adicionar Cartão**
+  - Configuração de novas contas bancárias e cartões de crédito.
+- [ ] **PROMPT 15: Modal de Detalhes do Cartão**
+  - Visão expandida de limites, fatura e transações específicas do cartão.
+- [ ] **PROMPT 16: Modal de Filtros Mobile**
+  - Drawer full-screen para gestão de filtros em dispositivos touch.
+- [ ] **PROMPT 17: View Completa de Cartões**
+  - Tela dedicada com grid responsivo de todos os cartões cadastrados.
+- [ ] **PROMPT 18: View Completa de Transações**
+  - Extrato expandido com filtros avançados e visualização estatística.
+- [ ] **PROMPT 19: View de Perfil - Aba Informações**
+  - Gestão de dados do usuário e visualização da família.
+- [ ] **PROMPT 20: View de Perfil - Aba Configurações**
+  - Preferências do sistema, notificações e gestão de categorias.
+- [ ] **PROMPT 21: Animações e Transições Globais**
+  - Refinamento de UX com Framer Motion, micro-interações e skeleton loaders.
+- [ ] **PROMPT 22: Formatação e Utilitários**
+  - Padronização de moedas, datas e cálculos financeiros em toda a app.
+- [ ] **PROMPT 23: Responsividade e Ajustes Finais**
+  - Revisão mobile-first e polimento de layout em todos os breakpoints.
+- [ ] **PROMPT 24: Testes e Validação Final**
+  - Fluxo completo de QA, acessibilidade e performance.
+- [ ] **PROMPT FINAL: Revisão e Entrega**
+  - Checklist de qualidade, documentação de componentes e relatório final.
