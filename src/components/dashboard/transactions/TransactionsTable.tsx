@@ -125,7 +125,7 @@ export function TransactionsTable() {
 
                 <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
                     {/* Search */}
-                    <div className="relative w-full md:w-64">
+                    <div className="relative w-full md:w-[200px]">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" size={18} />
                         <input
                             type="text"
