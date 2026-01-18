@@ -5,14 +5,17 @@ import { MainLayout } from './components/layout/MainLayout';
 import { SummaryCards } from './components/dashboard/SummaryCards';
 import { DashboardHeader } from './components/dashboard/DashboardHeader';
 import { ExpensesByCategoryCarousel } from './components/dashboard/category/ExpensesCarousel';
+import { FinancialFlowChart } from './components/dashboard/charts/FinancialFlowChart';
 
 const Dashboard = () => (
     <div className="flex flex-col gap-8">
         <DashboardHeader />
         <ExpensesByCategoryCarousel />
         <SummaryCards />
+        <FinancialFlowChart />
     </div>
 );
+
 const Goals = () => <h1 className="text-heading-lg font-bold">Objetivos</h1>;
 const Cards = () => <h1 className="text-heading-lg font-bold">Cartões</h1>;
 const Transactions = () => <h1 className="text-heading-lg font-bold">Transações</h1>;
