@@ -82,14 +82,14 @@ export function CategoryDonutCard({ name, value, percentage, color }: CategoryDo
 
             {/* Category Name */}
             <span
-                className="text-body-xs font-medium text-neutral-500 mb-4 text-center w-full truncate px-2"
+                className="text-paragraph-sm font-medium text-neutral-1100 mb-4 text-center w-full truncate px-2"
                 title={name} // Tooltip for truncation
             >
                 {name}
             </span>
 
             {/* Value */}
-            <span className="text-heading-sm font-bold text-neutral-1000 tracking-tight">
+            <span className="text-heading-xs font-bold text-neutral-1000 tracking-tight">
                 {formatCurrency(value)}
             </span>
         </div>
