@@ -1,28 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
-
-// Layout Placeholder
-const Layout = () => {
-    return (
-        <div className="flex min-h-screen bg-neutral-100">
-            {/* Sidebar will go here */}
-            <div className="hidden lg:block w-64 bg-white border-r border-neutral-200 p-4">
-                Sidebar (Desktop)
-            </div>
-
-            <div className="flex-1 flex flex-col min-w-0">
-                {/* Mobile Header will go here */}
-                <div className="lg:hidden h-16 bg-white border-b border-neutral-200 flex items-center px-4">
-                    Header (Mobile)
-                </div>
-
-                {/* Main Content */}
-                <main className="flex-1 p-4 md:p-6 lg:p-8 max-w-[1400px] xl:max-w-[1600px] w-full mx-auto">
-                    <Outlet />
-                </main>
-            </div>
-        </div>
-    );
-};
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MainLayout } from './components/layout/MainLayout';
 
 // Page Placeholders
 const Dashboard = () => <h1 className="text-heading-lg font-bold">Dashboard</h1>;
@@ -35,7 +12,7 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Layout />}>
+                <Route path="/" element={<MainLayout />}>
                     <Route index element={<Dashboard />} />
                     <Route path="goals" element={<Goals />} />
                     <Route path="cards" element={<Cards />} />

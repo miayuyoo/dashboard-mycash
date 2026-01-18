@@ -2,7 +2,7 @@
 
 Lista de tarefas baseada na sequência de prompts extraída.
 
-- [ ] **PROMPT 1: Estrutura Base e Configuração**
+- [x] **PROMPT 1: Estrutura Base e Configuração**
   - Setup de pastas, Tailwind CSS com variáveis do Figma, tipos TypeScript fundamentais e React Router.
 - [ ] **PROMPT 2: Sistema de Layout e Navegação Desktop**
   - Implementação da Sidebar expansível/colapsável com transições e estados de item ativo.
