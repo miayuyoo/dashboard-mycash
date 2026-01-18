@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Search, ChevronLeft, ChevronRight, ArrowDownLeft, ArrowUpRight, User, FileText } from 'lucide-react';
+import { Search, ChevronLeft, ChevronRight, ArrowDownLeft, ArrowUpRight, User, FileText, ChevronDown } from 'lucide-react';
 import { useFinance } from '../../../context/FinanceContext';
 import { formatCurrency } from '../../../utils/format';
 import { format, parseISO } from 'date-fns';
@@ -125,39 +125,40 @@ export function TransactionsTable() {
 
                 <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
                     {/* Search */}
-                    <div className="relative w-full md:w-64">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" size={18} />
+                    <div className="relative w-full md:w-96">
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" size={20} />
                         <input
                             type="text"
                             placeholder="Buscar lançamentos..."
                             value={localSearch}
                             onChange={(e) => setLocalSearch(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2 bg-white border border-neutral-200 rounded-lg text-body-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+                            className="w-full pl-12 pr-6 h-12 bg-white border border-neutral-200 rounded-full text-body-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900 transition-all"
                         />
                     </div>
 
                     {/* Type Filter */}
-                    <div className="w-full md:w-[140px]">
+                    <div className="relative w-full md:w-[180px]">
                         <select
                             value={localType}
                             onChange={(e) => setLocalType(e.target.value as any)}
-                            className="w-full px-3 py-2 bg-white border border-neutral-200 rounded-lg text-body-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 appearance-none cursor-pointer"
+                            className="w-full pl-6 pr-10 h-12 bg-white border border-neutral-200 rounded-full text-body-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 appearance-none cursor-pointer transition-all"
                         >
-                            <option value="all">Todos</option>
+                            <option value="all">Todas</option>
                             <option value="income">Receitas</option>
                             <option value="expense">Despesas</option>
                         </select>
+                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none" size={16} />
                     </div>
                 </div>
             </div>
 
-            {/* Table Wrapper (Rounded Border) */}
-            <div className="w-full border border-neutral-200 rounded-16 overflow-hidden flex flex-col">
+            {/* Table Wrapper (Borderless) */}
+            <div className="w-full flex flex-col">
                 <div className="overflow-x-auto">
                     <table className="w-full min-w-[800px]">
                         <thead className="bg-neutral-50 border-b border-neutral-100">
                             <tr>
-                                <th className="px-6 py-4 text-left text-label-xs font-bold text-neutral-500 uppercase tracking-wider w-[50px]">Avatar</th>
+                                <th className="px-6 py-4 text-left text-label-xs font-bold text-neutral-500 uppercase tracking-wider w-[60px]">Avatar</th>
                                 <th className="px-6 py-4 text-left text-label-xs font-bold text-neutral-500 uppercase tracking-wider">Data</th>
                                 <th className="px-6 py-4 text-left text-label-xs font-bold text-neutral-500 uppercase tracking-wider">Descrição</th>
                                 <th className="px-6 py-4 text-left text-label-xs font-bold text-neutral-500 uppercase tracking-wider">Categoria</th>
@@ -173,24 +174,19 @@ export function TransactionsTable() {
                                     const isIncome = tx.type === 'income';
                                     const Icon = isIncome ? ArrowDownLeft : ArrowUpRight;
                                     const iconColor = isIncome ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700';
-                                    const isEven = idx % 2 === 0;
 
                                     return (
                                         <tr
                                             key={tx.id}
-                                            className={clsx(
-                                                "group transition-colors",
-                                                isEven ? "bg-white" : "bg-neutral-50/50",
-                                                "hover:bg-neutral-100"
-                                            )}
+                                            className="group transition-colors bg-white hover:bg-neutral-50"
                                         >
-                                            {/* Avatar */}
+                                            {/* Avatar (40px) */}
                                             <td className="px-6 py-4">
                                                 {member?.avatarUrl ? (
-                                                    <img src={member.avatarUrl} alt={member.name} className="w-6 h-6 rounded-full object-cover" />
+                                                    <img src={member.avatarUrl} alt={member.name} className="w-10 h-10 rounded-full object-cover border border-white shadow-sm" />
                                                 ) : (
-                                                    <div className="w-6 h-6 rounded-full bg-neutral-200 flex items-center justify-center">
-                                                        <User size={14} className="text-neutral-500" />
+                                                    <div className="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center border border-white shadow-sm">
+                                                        <User size={20} className="text-neutral-500" />
                                                     </div>
                                                 )}
                                             </td>
@@ -200,11 +196,11 @@ export function TransactionsTable() {
                                                 {format(parseISO(tx.date), 'dd/MM/yyyy')}
                                             </td>
 
-                                            {/* Description */}
+                                            {/* Description (Icon 24px) */}
                                             <td className="px-6 py-4">
-                                                <div className="flex items-center gap-3">
-                                                    <div className={clsx("w-8 h-8 rounded-full flex items-center justify-center", iconColor)}>
-                                                        <Icon size={16} />
+                                                <div className="flex items-center gap-4">
+                                                    <div className={clsx("w-10 h-10 rounded-full flex items-center justify-center", iconColor)}>
+                                                        <Icon size={24} />
                                                     </div>
                                                     <span className="text-body-sm font-bold text-neutral-1000 line-clamp-1">{tx.description}</span>
                                                 </div>
@@ -251,7 +247,7 @@ export function TransactionsTable() {
 
                 {/* Pagination */}
                 {filteredData.length > 0 && (
-                    <div className="flex items-center justify-between p-24 border-t border-neutral-100 bg-white">
+                    <div className="flex items-center justify-between pt-24 border-t border-neutral-100">
                         <span className="text-body-xs text-neutral-500">
                             Mostrando <span className="font-bold text-neutral-900">{Math.min(startIndex + 1, filteredData.length)}</span> a <span className="font-bold text-neutral-900">{Math.min(startIndex + ITEMS_PER_PAGE, filteredData.length)}</span> de <span className="font-bold text-neutral-900">{filteredData.length}</span>
                         </span>
