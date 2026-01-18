@@ -93,7 +93,7 @@ export function TransactionsTable() {
     // Pagination Rendering
     const renderPageButton = (page: number | string, idx: number) => {
         if (page === '...') {
-            return <span key={`ellipsis-${idx}`} className="px-2 text-neutral-400">...</span>;
+            return <span key={`ellipsis-${idx}`} className="px-2 text-neutral-300">...</span>;
         }
         const p = page as number;
         return (
@@ -101,10 +101,10 @@ export function TransactionsTable() {
                 key={p}
                 onClick={() => handlePageChange(p)}
                 className={clsx(
-                    "w-8 h-8 rounded-lg text-label-sm font-medium transition-colors",
+                    "w-10 h-10 rounded-full text-label-sm font-bold transition-all duration-200 flex items-center justify-center",
                     currentPage === p
-                        ? "bg-neutral-1000 text-white"
-                        : "text-neutral-500 hover:bg-neutral-100"
+                        ? "bg-neutral-900 text-white shadow-md hover:bg-neutral-800"
+                        : "text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900"
                 )}
             >
                 {p}
@@ -118,7 +118,7 @@ export function TransactionsTable() {
             <div className="flex flex-col md:flex-row items-center justify-between mb-24 gap-6">
                 <div className="flex items-center gap-3 self-start md:self-center">
                     <div className="p-8 bg-neutral-100 rounded-lg">
-                        <FileText size={24} className="text-neutral-1000" />
+                        <FileText size={20} className="text-neutral-1000" />
                     </div>
                     <h3 className="text-heading-sm font-bold text-neutral-1000">Extrato detalhado</h3>
                 </div>
@@ -248,7 +248,7 @@ export function TransactionsTable() {
                 {/* Pagination */}
                 {filteredData.length > 0 && (
                     <div className="flex items-center justify-between pt-24 border-t border-neutral-100">
-                        <span className="text-body-xs text-neutral-500">
+                        <span className="text-body-sm text-neutral-500">
                             Mostrando <span className="font-bold text-neutral-900">{Math.min(startIndex + 1, filteredData.length)}</span> a <span className="font-bold text-neutral-900">{Math.min(startIndex + ITEMS_PER_PAGE, filteredData.length)}</span> de <span className="font-bold text-neutral-900">{filteredData.length}</span>
                         </span>
 
@@ -256,9 +256,9 @@ export function TransactionsTable() {
                             <button
                                 onClick={() => handlePageChange(currentPage - 1)}
                                 disabled={currentPage === 1}
-                                className="w-8 h-8 flex items-center justify-center text-neutral-500 hover:bg-neutral-100 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                className="w-10 h-10 flex items-center justify-center text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                             >
-                                <ChevronLeft size={18} />
+                                <ChevronLeft size={20} />
                             </button>
 
                             {getPageNumbers().map((p, i) => renderPageButton(p, i))}
@@ -266,9 +266,9 @@ export function TransactionsTable() {
                             <button
                                 onClick={() => handlePageChange(currentPage + 1)}
                                 disabled={currentPage === totalPages}
-                                className="w-8 h-8 flex items-center justify-center text-neutral-500 hover:bg-neutral-100 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                className="w-10 h-10 flex items-center justify-center text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                             >
-                                <ChevronRight size={18} />
+                                <ChevronRight size={20} />
                             </button>
                         </div>
                     </div>
