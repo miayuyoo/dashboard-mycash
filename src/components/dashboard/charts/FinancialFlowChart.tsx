@@ -40,7 +40,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export function FinancialFlowChart() {
     return (
-        <div className="w-full bg-white p-24 md:p-32 rounded-32 border border-neutral-200">
+        <div className="w-full h-full flex flex-col bg-white p-24 md:p-32 rounded-32 border border-neutral-200">
             {/* Header */}
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-32 gap-4">
                 <div className="flex items-center gap-3">
@@ -63,7 +63,7 @@ export function FinancialFlowChart() {
             </div>
 
             {/* Chart */}
-            <div className="w-full h-[300px]">
+            <div className="w-full flex-1 min-h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
                     <AreaChart
                         data={MOCK_DATA}
