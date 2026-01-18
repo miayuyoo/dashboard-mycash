@@ -224,5 +224,35 @@ export const INITIAL_TRANSACTIONS: Transaction[] = [
         date: new Date().toISOString(),
         memberId: 'm3',
         status: 'pending' // Just recorded
+    },
+    {
+        id: 't9',
+        type: 'expense',
+        amount: 320.00,
+        description: 'Fisioterapia',
+        category: 'Saúde',
+        date: new Date().toISOString(),
+        memberId: 'm1',
+        status: 'completed'
+    },
+    {
+        id: 't10',
+        type: 'expense',
+        amount: 450.00,
+        description: 'Curso Online',
+        category: 'Educação',
+        date: new Date().toISOString(),
+        memberId: 'm2',
+        status: 'completed'
+    },
+    {
+        id: 't11',
+        type: 'expense',
+        amount: 210.00,
+        description: 'Roupas Renner',
+        category: 'Vestuário',
+        date: new Date().toISOString(),
+        memberId: 'm1',
+        status: 'completed'
     }
 ];

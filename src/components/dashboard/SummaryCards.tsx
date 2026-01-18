@@ -4,7 +4,7 @@ import { ExpenseCard } from './ExpenseCard';
 
 export function SummaryCards() {
     return (
-        <section className="grid grid-cols-1 lg:flex gap-6 w-full mb-8">
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full h-full">
             <BalanceCard />
             <IncomeCard />
             <ExpenseCard />

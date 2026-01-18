@@ -15,9 +15,11 @@ const Dashboard = () => (
         {/* Main Grid: Carousel/Summary (Left) | Widgets (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             {/* Left Column: Carousel & Summary */}
-            <div className="lg:col-span-2 flex flex-col gap-8">
+            <div className="lg:col-span-2 flex flex-col gap-8 h-full">
                 <ExpensesByCategoryCarousel />
-                <SummaryCards />
+                <div className="flex-1">
+                    <SummaryCards />
+                </div>
             </div>
 
             {/* Right Column: Widgets */}
