@@ -61,9 +61,9 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
                     // COLLAPSED: Icon Only (External SVG)
                     <div className="shrink-0 flex items-center justify-center">
                         <img
-                            src="/logo-small.svg"
+                            src="/logo-small.svg?v=2"
                             alt="Mycash+ Logo"
-                            className="h-24 w-auto"
+                            className="h-8 w-auto object-contain" // Force 32px height
                         />
                     </div>
                 ) : (
@@ -71,9 +71,9 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
                     <div className="flex items-center">
                         <div className="shrink-0">
                             <img
-                                src="/logo-full.svg"
+                                src="/logo-full.svg?v=3"
                                 alt="Mycash+ Logo"
-                                className="h-32 w-auto"
+                                className="h-10 w-auto object-contain" // Increased to 40px height
                             />
                         </div>
                     </div>
@@ -82,7 +82,7 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
 
             {/* NAVIGATION LINKS */}
             <nav className={clsx(
-                "flex-1 flex flex-col gap-8 py-32",
+                "flex-1 flex flex-col gap-8 pt-56 pb-32",
                 isCollapsed ? "items-center px-16" : "px-32"
             )}>
                 {MENU_ITEMS.map((item) => {

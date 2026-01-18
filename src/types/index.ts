@@ -28,7 +28,7 @@ export interface Goal {
     status: GoalStatus;
 }
 
-export type CardTheme = 'black' | 'lime' | 'white';
+export type CardTheme = 'black' | 'lime' | 'white' | 'purple';
 
 export interface CreditCard {
     id: string;

@@ -8,7 +8,7 @@ Lista de tarefas baseada na sequência de prompts extraída.
   - Implementação da Sidebar expansível/colapsável com transições e estados de item ativo.
 - [x] **PROMPT 3: Sistema de Layout e Navegação Mobile**
   - Criação do HeaderMobile, MenuDropdown e lógica de responsividade para alternância entre layouts.
-- [ ] **PROMPT 4: Context Global e Gerenciamento de Estado**
+- [x] **PROMPT 4: Context Global e Gerenciamento de Estado**
   - Configuração do `FinanceProvider`, funções CRUD em memória e lógica de filtros globais.
 - [ ] **PROMPT 5: Cards de Resumo Financeiro**
   - Desenvolvimento dos cards de Saldo Total, Receitas e Despesas com animações.
