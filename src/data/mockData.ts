@@ -254,5 +254,54 @@ export const INITIAL_TRANSACTIONS: Transaction[] = [
         date: new Date().toISOString(),
         memberId: 'm1',
         status: 'completed'
+    },
+    // Pending Upcoming Expenses
+    {
+        id: 't_pending_1',
+        type: 'expense',
+        amount: 160.00,
+        description: 'Conta de luz',
+        category: 'Contas',
+        date: '2026-01-21T10:00:00Z',
+        accountId: 'acc2', // Nubank
+        isRecurring: true,
+        recurrenceFrequency: 'monthly',
+        status: 'pending'
+    },
+    {
+        id: 't_pending_2',
+        type: 'expense',
+        amount: 80.00,
+        description: 'Netflix',
+        category: 'Assinaturas',
+        date: '2026-01-21T10:00:00Z',
+        cardId: 'card1', // Nubank Ultravioleta
+        isRecurring: true,
+        recurrenceFrequency: 'monthly',
+        status: 'pending'
+    },
+    {
+        id: 't_pending_3',
+        type: 'expense',
+        amount: 99.00,
+        description: 'Internet',
+        category: 'Contas',
+        date: '2026-01-21T12:00:00Z',
+        accountId: 'acc2',
+        isRecurring: true,
+        recurrenceFrequency: 'monthly',
+        status: 'pending'
+    },
+    {
+        id: 't_pending_4',
+        type: 'expense',
+        amount: 60.00,
+        description: 'Academia',
+        category: 'Saúde',
+        date: '2026-01-21T08:00:00Z',
+        cardId: 'card2', // XP Visa
+        isRecurring: true,
+        recurrenceFrequency: 'monthly',
+        status: 'pending'
     }
 ];

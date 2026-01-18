@@ -7,6 +7,7 @@ import { DashboardHeader } from './components/dashboard/DashboardHeader';
 import { ExpensesByCategoryCarousel } from './components/dashboard/category/ExpensesCarousel';
 import { FinancialFlowChart } from './components/dashboard/charts/FinancialFlowChart';
 import { CreditCardsWidget } from './components/dashboard/widgets/CreditCardsWidget';
+import { UpcomingExpensesWidget } from './components/dashboard/widgets/UpcomingExpensesWidget';
 
 const Dashboard = () => (
     <div className="flex flex-col gap-8">
@@ -28,8 +29,15 @@ const Dashboard = () => (
             </div>
         </div>
 
-        {/* Full Width Flow Chart */}
-        <FinancialFlowChart />
+        {/* Second Row Grid: Flow Chart & Upcoming Expenses */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div className="lg:col-span-2">
+                <FinancialFlowChart />
+            </div>
+            <div className="lg:col-span-1 h-full">
+                <UpcomingExpensesWidget />
+            </div>
+        </div>
     </div>
 );
 

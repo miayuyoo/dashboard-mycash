@@ -9,8 +9,13 @@ export interface Transaction {
     category: string;
     date: string; // ISO 8601
     accountId?: string;
+    cardId?: string;
     memberId?: string;
-    installments?: number; // 1 for one-time
+    installments?: number; // legacy
+    currentInstallment?: number;
+    totalInstallments?: number;
+    isRecurring?: boolean;
+    recurrenceFrequency?: 'monthly' | 'yearly';
     status: TransactionStatus;
 }
 
