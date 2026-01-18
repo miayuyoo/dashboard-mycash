@@ -6,13 +6,23 @@ import { SummaryCards } from './components/dashboard/SummaryCards';
 import { DashboardHeader } from './components/dashboard/DashboardHeader';
 import { ExpensesByCategoryCarousel } from './components/dashboard/category/ExpensesCarousel';
 import { FinancialFlowChart } from './components/dashboard/charts/FinancialFlowChart';
+import { CreditCardsWidget } from './components/dashboard/widgets/CreditCardsWidget';
 
 const Dashboard = () => (
     <div className="flex flex-col gap-8">
         <DashboardHeader />
         <ExpensesByCategoryCarousel />
         <SummaryCards />
-        <FinancialFlowChart />
+
+        {/* Main Content Info Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+                <FinancialFlowChart />
+            </div>
+            <div className="lg:col-span-1 h-full">
+                <CreditCardsWidget />
+            </div>
+        </div>
     </div>
 );
 
