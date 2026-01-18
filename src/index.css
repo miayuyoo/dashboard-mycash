@@ -6,14 +6,15 @@
     body {
         @apply font-sans text-neutral-900 bg-neutral-100;
     }
+}
 
-    @layer utilities {
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
     }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
